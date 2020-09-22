@@ -23,9 +23,6 @@ public class Post: RssParsableModel {
     
     required public init(data: [AnyHashable: Any]) throws {
         if let tTitle = data["title"] as? String {
-            if tTitle == "iOS Programming" {
-                print(tTitle)
-            }
             title = tTitle
         } else {
             throw ParserError.emptyField
